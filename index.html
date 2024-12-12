@@ -7,7 +7,35 @@
     <title>My Web Page</title>
 </head>
 <body>
-    <h1>Welcome to My Web Page</h1>
+    <div class="container">
+        <h1>Welcome to My Web Page</h1>
+        
+        <!-- Text Change Section -->
+        <div class="section">
+            <p id="display-text">Click the button to change this text!</p>
+            <button id="changeText">Change Text</button>
+        </div>
+
+        <!-- Counter Section -->
+        <div class="section">
+            <h2>Counter: <span id="counter">0</span></h2>
+            <button id="increment">+</button>
+            <button id="decrement">-</button>
+        </div>
+
+        <!-- Color Changer Section -->
+        <div class="section">
+            <button id="colorChange">Change Background Color</button>
+        </div>
+
+        <!-- Greeting Section -->
+        <div class="section">
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button id="greet">Greet Me!</button>
+            <p id="greetingText"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
