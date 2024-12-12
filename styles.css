@@ -52,3 +52,25 @@ button {
 button:hover {
     background-color: #2980b9;
 }
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #e8f4f8;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
