@@ -42,10 +42,23 @@ A modern web application with user authentication and interactive features.
 
 
 my_web_page/
-│
-├── index.html
-├── styles.css
-├── script.js
+├── src/
+│ ├── assets/
+│ │ └── styles/
+│ │ ├── main.css
+│ │ └── components.css
+│ ├── js/
+│ │ └── main.js
+│ └── php/
+│ ├── config/
+│ │ └── database.php
+│ └── auth/
+│ ├── login.php
+│ ├── register.php
+│ └── logout.php
+├── index.php
+├── login.html
+├── register.html
 └── README.md
 
 
