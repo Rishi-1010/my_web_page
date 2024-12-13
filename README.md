@@ -41,7 +41,7 @@ A modern web application with user authentication and interactive features.
 ## Project Structure 🗂️
 
 
-plaintext
+```
 my_web_page/
 ├── src/
 │ ├── assets/
@@ -67,7 +67,7 @@ my_web_page/
 ├── test.php # Testing file
 ├── test_connection.php # Database connection test
 └── README.md # Project documentation
-
+```
 
 
 ## How to Run
