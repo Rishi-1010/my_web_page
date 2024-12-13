@@ -38,11 +38,11 @@ A modern web application with user authentication and interactive features.
   - XAMPP
   - Visual Studio Code
 
-## Project Structure
+## Project Structure 🗂️
 
 
+plaintext
 my_web_page/
-│
 ├── src/
 │ ├── assets/
 │ │ └── styles/
@@ -99,7 +99,7 @@ This project is open source and available under the [MIT License](LICENSE).
 2. **Installation:**
    ```bash
    # Clone the repository
-   git clone https://github.com/yourusername/my_web_page.git
+   git clone https://github.com/Rishi-1010/my_web_page.git
 
    # Move to project directory
    cd my_web_page
