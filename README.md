@@ -38,29 +38,35 @@ A modern web application with user authentication and interactive features.
   - XAMPP
   - Visual Studio Code
 
-## Project Structure
+## Project Structure 📁
 
 
+plaintext
 my_web_page/
 ├── src/
 │ ├── assets/
 │ │ └── styles/
-│ │ ├── main.css
-│ │ └── components.css
+│ │ ├── main.css # Main styling
+│ │ └── components.css # Component-specific styles
+│ │
 │ ├── js/
-│ │ └── main.js
+│ │ └── main.js # Main JavaScript functionality
+│ │
 │ └── php/
 │ ├── config/
-│ │ └── database.php
+│ │ └── database.php # Database configuration
+│ │
 │ └── auth/
-│ ├── login.php
-│ ├── register.php
-│ └── logout.php
-├── index.php
-├── login.html
-├── register.html
-└── README.md
-
+│ ├── login.php # Login processing
+│ ├── register.php # Registration processing
+│ └── logout.php # Logout handling
+│
+├── index.php # Main entry point
+├── login.html # Login page
+├── register.html # Registration page
+├── test.php # Testing file
+├── test_connection.php # Database connection test
+└── README.md # Project documentation
 
 
 ## How to Run
