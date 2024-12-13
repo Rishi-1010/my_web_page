@@ -21,16 +21,13 @@ $username = $isLoggedIn ? $_SESSION['username'] : '';
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <!-- Dynamic Auth Links -->
-                <li class="auth-buttons">
-                    <?php if ($isLoggedIn): ?>
-                        <span class="welcome-text">Welcome, <?php echo htmlspecialchars($username); ?></span>
-                        <a href="src/php/auth/logout.php" class="btn btn-logout">Logout</a>
-                    <?php else: ?>
-                        <a href="login.html" class="btn btn-login">Login</a>
-                        <a href="register.html" class="btn btn-register">Register</a>
-                    <?php endif; ?>
-                </li>
+                <?php if ($isLoggedIn): ?>
+                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="src/php/auth/logout.php">Logout</a></li>
+                <?php else: ?>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                <?php endif; ?>
             </ul>
         </div>
     </nav>

@@ -2,21 +2,24 @@
 
 A modern web application with user authentication and interactive features.
 
-![Project Preview](preview.png)
+![Project Preview](src/assets/img/picture.png)
 
 ## Features
 
-### User Authentication
+### User Authentication & Management
 - User Registration
 - User Login/Logout
 - Session Management
 - Secure Password Hashing
+- Profile Settings Management
+- User Dashboard
 
 ### Interactive UI
 - Responsive Design
 - Dynamic Navigation
 - Feature Cards
-- Interactive Dashboard for Logged-in Users
+- Interactive Dashboard
+- Profile Management Interface
 - Modern CSS Animations
 
 ## Tech Stack
@@ -40,35 +43,36 @@ A modern web application with user authentication and interactive features.
 
 ## Project Structure 🗂️
 
-
 ```
 my_web_page/
 ├── src/
-│ ├── assets/
-│ │ └── styles/
-│ │ ├── main.css # Main styling
-│ │ └── components.css # Component-specific styles
-│ │
-│ ├── js/
-│ │ └── main.js # Main JavaScript functionality
-│ │
-│ └── php/
-│ ├── config/
-│ │ └── database.php # Database configuration
-│ │
-│ └── auth/
-│ ├── login.php # Login processing
-│ ├── register.php # Registration processing
-│ └── logout.php # Logout handling
+│   ├── assets/
+│   │   └── styles/
+│   │       ├── main.css          # Main styling
+│   │       └── components.css     # Component-specific styles
+│   │
+│   ├── js/
+│   │   └── main.js              # Main JavaScript functionality
+│   │
+│   └── php/
+│       ├── config/
+│       │   └── database.php      # Database configuration
+│       │
+│       └── auth/
+│           ├── login.php         # Login processing
+│           ├── register.php      # Registration processing
+│           ├── logout.php        # Logout handling
+│           └── update-profile.php # Profile updates
 │
-├── index.php # Main entry point
-├── login.html # Login page
-├── register.html # Registration page
-├── test.php # Testing file
-├── test_connection.php # Database connection test
-└── README.md # Project documentation
+├── index.php                     # Main entry point
+├── login.html                    # Login page
+├── register.html                 # Registration page
+├── dashboard.php                 # User dashboard
+├── profile-settings.php          # Profile management
+├── test.php                      # Testing file
+├── test_connection.php          # Database connection test
+└── README.md                    # Project documentation
 ```
-
 
 ## How to Run
 
@@ -120,7 +124,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Features in Development
 
-- [ ] User Profile Management
+- [x] User Profile Management
+- [x] User Dashboard
 - [ ] Password Reset Functionality
 - [ ] Email Verification
 - [ ] Admin Dashboard
@@ -130,6 +135,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - `main` - Production ready code
 - `feature/user-authentication` - Authentication system
+- `feature/dashboard` - User dashboard implementation
+- `feature/profile-settings` - Profile management system
 - `development` - Latest development changes
 
 ## Contributing
