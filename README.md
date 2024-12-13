@@ -1,21 +1,42 @@
 # My Web Page Project
 
-A simple web page project to learn and practice Git version control.
+A modern web application with user authentication and interactive features.
 
-## Description
+![Project Preview](preview.png)
 
-This project is a basic web page that includes:
-- HTML structure
-- CSS styling
-- JavaScript functionality
-- Interactive button with alert message
+## Features
 
-## Technologies Used
+### User Authentication
+- User Registration
+- User Login/Logout
+- Session Management
+- Secure Password Hashing
 
-- HTML5
-- CSS3
-- JavaScript
-- Git
+### Interactive UI
+- Responsive Design
+- Dynamic Navigation
+- Feature Cards
+- Interactive Dashboard for Logged-in Users
+- Modern CSS Animations
+
+## Tech Stack
+
+- **Frontend:**
+  - HTML5
+  - CSS3
+  - JavaScript
+  - Bootstrap
+  - Font Awesome Icons
+
+- **Backend:**
+  - PHP
+  - MySQL
+  - PDO Database Connection
+
+- **Development Tools:**
+  - Git
+  - XAMPP
+  - Visual Studio Code
 
 ## Project Structure
 
@@ -47,3 +68,70 @@ Rishi Bardoliya
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## Setup Instructions
+
+1. **Prerequisites:**
+   - XAMPP installed
+   - Git installed
+   - Web browser
+
+2. **Installation:**
+   ```bash
+   # Clone the repository
+   git clone https://github.com/yourusername/my_web_page.git
+
+   # Move to project directory
+   cd my_web_page
+   ```
+
+3. **Database Setup:**
+   - Start XAMPP Apache and MySQL services
+   - Create a new database named 'webapp_db'
+   - Import the database structure from `database.sql`
+
+4. **Configuration:**
+   - Update database credentials in `src/php/config/database.php`
+   - Ensure proper file permissions
+
+5. **Access the Application:**
+   - Open your browser
+   - Navigate to: `http://localhost/GIT/my_web_page/`
+
+## Features in Development
+
+- [ ] User Profile Management
+- [ ] Password Reset Functionality
+- [ ] Email Verification
+- [ ] Admin Dashboard
+- [ ] User Activity Logging
+
+## Git Branches
+
+- `main` - Production ready code
+- `feature/user-authentication` - Authentication system
+- `development` - Latest development changes
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Bootstrap Documentation
+- PHP Documentation
+- Font Awesome Icons
+- XAMPP Team
+
+## Contact
+
+Rishi Bardoliya - rishibardoliya@gmail.com
+Project Link: [https://github.com/yourusername/my_web_page](https://github.com/yourusername/my_web_page)
