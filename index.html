@@ -3,39 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>My Web Page</title>
+    <title>Your Project</title>
+    <link rel="stylesheet" href="src/assets/styles/main.css">
+    <link rel="stylesheet" href="src/assets/styles/components.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Web Page</h1>
-        
-        <!-- Text Change Section -->
-        <div class="section">
-            <p id="display-text">Click the button to change this text!</p>
-            <button id="changeText">Change Text</button>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">WebApp</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- Counter Section -->
-        <div class="section">
-            <h2>Counter: <span id="counter">0</span></h2>
-            <button id="increment">+</button>
-            <button id="decrement">-</button>
-        </div>
+    <main class="container">
+        <section id="home" class="hero">
+            <h1>Welcome to Our Web App</h1>
+            <p>A modern web application built with HTML, CSS, and JavaScript</p>
+            <button class="btn primary" id="cta-button">Get Started</button>
+        </section>
 
-        <!-- Color Changer Section -->
-        <div class="section">
-            <button id="colorChange">Change Background Color</button>
-        </div>
+        <!-- Updated Features Section -->
+        <section id="features" class="features">
+            <div class="section-header">
+                <h2>Features</h2>
+                <p>Explore our interactive features below</p>
+            </div>
+            <!-- This is the container that JavaScript will populate -->
+            <div class="feature-grid">
+                <!-- Feature cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
 
-        <!-- Greeting Section -->
-        <div class="section">
-            <input type="text" id="nameInput" placeholder="Enter your name">
-            <button id="greet">Greet Me!</button>
-            <p id="greetingText"></p>
-        </div>
-    </div>
+    <footer class="footer">
+        <p>© 2024 WebApp. All rights reserved.</p>
+    </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>

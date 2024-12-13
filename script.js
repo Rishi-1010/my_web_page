@@ -1,45 +1,83 @@
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // DOM Elements
-    const button = document.querySelector('button');
-    const container = document.querySelector('.container');
+// // Wait for DOM to be fully loaded
+// document.addEventListener('DOMContentLoaded', () => {
+//     console.log("Main.js is loaded successfully!");
 
-    // Counter for tracking clicks
-    let clickCount = 0;
+//     // Add feature cards dynamically
+//     const featureGrid = document.querySelector('.feature-grid');
+//     const features = [
+//         {
+//             title: 'Counter',
+//             content: `
+//                 <div class="counter-container">
+//                     <h3>Count: <span id="counter">0</span></h3>
+//                     <button class="btn" id="increment">+</button>
+//                     <button class="btn" id="decrement">-</button>
+//                 </div>
+//             `
+//         },
+//         {
+//             title: 'Background Changer',
+//             content: `
+//                 <button class="btn" id="colorChange">Change Background</button>
+//             `
+//         },
+//         {
+//             title: 'Greeting',
+//             content: `
+//                 <div class="greeting-container">
+//                     <input type="text" id="nameInput" placeholder="Enter your name">
+//                     <button class="btn" id="greet">Greet Me!</button>
+//                     <p id="greetingText"></p>
+//                 </div>
+//             `
+//         }
+//     ];
 
-    // Main button click function
-    function showMessage() {
-        clickCount++;
+//     // Add feature cards to the grid
+//     features.forEach(feature => {
+//         const card = document.createElement('div');
+//         card.className = 'feature-card';
+//         card.innerHTML = `
+//             <h3>${feature.title}</h3>
+//             ${feature.content}
+//         `;
+//         featureGrid.appendChild(card);
+//     });
+
+//     // Counter functionality
+//     let count = 0;
+//     const counterDisplay = document.getElementById('counter');
+    
+//     document.getElementById('increment')?.addEventListener('click', () => {
+//         count++;
+//         counterDisplay.textContent = count;
+//     });
+
+//     document.getElementById('decrement')?.addEventListener('click', () => {
+//         count--;
+//         counterDisplay.textContent = count;
+//     });
+
+//     // Background color changer
+//     document.getElementById('colorChange')?.addEventListener('click', () => {
+//         const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+//         document.body.style.backgroundColor = randomColor;
+//     });
+
+//     // Greeting functionality
+//     document.getElementById('greet')?.addEventListener('click', () => {
+//         const name = document.getElementById('nameInput').value;
+//         const greetingText = document.getElementById('greetingText');
         
-        // Create a new message with animation
-        const message = document.createElement('div');
-        message.className = 'message';
-        message.textContent = `Click #${clickCount}: Hello! This is my first Git project!`;
-        
-        // Add message to container
-        container.appendChild(message);
-        
-        // Remove message after 3 seconds
-        setTimeout(() => {
-            message.style.opacity = '0';
-            setTimeout(() => {
-                container.removeChild(message);
-            }, 500);
-        }, 3000);
-    }
+//         if (name.trim() !== '') {
+//             greetingText.textContent = `Hello, ${name}! Welcome to our site!`;
+//         } else {
+//             greetingText.textContent = 'Please enter your name!';
+//         }
+//     });
 
-    // Add hover effect to button
-    button.addEventListener('mouseover', () => {
-        button.style.transform = 'scale(1.1)';
-    });
-
-    button.addEventListener('mouseout', () => {
-        button.style.transform = 'scale(1)';
-    });
-
-    // Add click event to button
-    button.addEventListener('click', showMessage);
-
-    // Initial console message
-    console.log('JavaScript loaded successfully!');
-});
+//     // CTA button functionality
+//     document.getElementById('cta-button')?.addEventListener('click', () => {
+//         alert('Welcome to our WebApp!');
+//     });
+// });
