@@ -134,4 +134,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 Rishi Bardoliya - rishibardoliya@gmail.com
-Project Link: [https://github.com/yourusername/my_web_page](https://github.com/yourusername/my_web_page)
+Project Link: [https://github.com/Rishi-1010/my_web_page](https://github.com/Rishi-1010/my_web_page)
