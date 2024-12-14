@@ -12,6 +12,7 @@ $username = $isLoggedIn ? $_SESSION['username'] : '';
     <title>Your Project</title>
     <link rel="stylesheet" href="src/assets/styles/main.css">
     <link rel="stylesheet" href="src/assets/styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -23,6 +24,21 @@ $username = $isLoggedIn ? $_SESSION['username'] : '';
                 <li><a href="#contact">Contact</a></li>
                 <?php if ($isLoggedIn): ?>
                     <li><a href="dashboard.php">Dashboard</a></li>
+                    <li>
+                        <a href="profile-settings.php" class="profile-link" title="Profile Settings">
+                            <?php if (isset($_SESSION['profile_picture']) && !empty($_SESSION['profile_picture'])): ?>
+                                <img src="uploads/profile_pictures/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" 
+                                     alt="Profile Settings" 
+                                     class="profile-picture-small"
+                                     onerror="this.src='src/assets/images/default-avatar.png'"
+                                     onload="this.style.display='block'">
+                            <?php else: ?>
+                                <img src="src/assets/images/default-avatar.png" 
+                                     alt="Profile Settings" 
+                                     class="profile-picture-small">
+                            <?php endif; ?>
+                        </a>
+                    </li>
                     <li><a href="src/php/auth/logout.php">Logout</a></li>
                 <?php else: ?>
                     <li><a href="login.html">Login</a></li>
@@ -43,7 +59,6 @@ $username = $isLoggedIn ? $_SESSION['username'] : '';
                             <h3>Your Dashboard</h3>
                             <p>Access your personalized features and settings.</p>
                         </div>
-                        <!-- Add more feature cards for logged-in users -->
                     </div>
                 </div>
             </section>
@@ -68,9 +83,6 @@ $username = $isLoggedIn ? $_SESSION['username'] : '';
         <!-- Your existing footer content -->
     </footer>
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
