@@ -24,12 +24,12 @@ if (!isset($_SESSION['user_id'])) {
             <div class="dashboard-header">
                 <div class="user-welcome">
                     <?php if (isset($_SESSION['profile_picture']) && !empty($_SESSION['profile_picture'])): ?>
-                        <img src="uploads/profile_pictures/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>" 
+                        <img src="uploads/profile_pictures/<?php echo htmlspecialchars($_SESSION['profile_picture']); ?>"
                              alt="Profile Picture"
                              class="dashboard-profile-picture"
                              onerror="this.src='src/assets/images/default-avatar.png'">
                     <?php else: ?>
-                        <img src="src/assets/images/default-avatar.png" 
+                        <img src="src/assets/images/default-avatar.png"
                              alt="Default Profile Picture"
                              class="dashboard-profile-picture">
                     <?php endif; ?>
@@ -37,7 +37,6 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             </div>
             <div class="dashboard-content">
-                <!-- Your existing dashboard content -->
             </div>
         </section>
     </main>

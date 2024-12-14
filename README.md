@@ -47,31 +47,34 @@ A modern web application with user authentication and interactive features.
 my_web_page/
 ├── src/
 │   ├── assets/
+│   │   ├── img/         # Folder for images
+│   │   │   ├── default-avatar.png
+│   │   │   ├── picture.png
 │   │   └── styles/
-│   │       ├── main.css          # Main styling
-│   │       └── components.css     # Component-specific styles
-│   │
+│   │       ├── components.css        # Component-specific styles
+│   │       ├── main.css              # Main styling
+│   ├── components/
+│   │   └── navbar.php                # Navigation bar component
 │   ├── js/
-│   │   └── main.js              # Main JavaScript functionality
-│   │
-│   └── php/
-│       ├── config/
-│       │   └── database.php      # Database configuration
-│       │
-│       └── auth/
-│           ├── login.php         # Login processing
-│           ├── register.php      # Registration processing
-│           ├── logout.php        # Logout handling
-│           └── update-profile.php # Profile updates
-│
-├── index.php                     # Main entry point
-├── login.html                    # Login page
-├── register.html                 # Registration page
-├── dashboard.php                 # User dashboard
-├── profile-settings.php          # Profile management
-├── test.php                      # Testing file
-├── test_connection.php          # Database connection test
-└── README.md                    # Project documentation
+│   │   ├── main.js                   # Main JavaScript functionality
+│   │   └── profile-settings.js       # Profile settings specific JS
+│   ├── php/
+│   │   ├── auth/                     # Authentication functionalities
+│   │   │   ├── login.php             # Login processing
+│   │   │   ├── logout.php            # Logout handling
+│   │   │   ├── register.php          # Registration processing
+│   │   │   └── update-profile.php    # Profile updates
+│   │   ├── config/                   # Configuration files
+│   │   │   └── database.php          # Database configuration
+│   │   ├── profile_picture/          # Profile picture functionalities
+│   │   │   └── update_profile.php    # Handles profile picture updates
+├── index.php                         # Main entry point
+├── login.html                        # Login page
+├── register.html                     # Registration page
+├── dashboard.php                     # User dashboard
+├── profile-settings.php              # Profile management
+├── README.md                         # Project documentation
+└── LICENSE                          # License file
 ```
 
 ## How to Run
