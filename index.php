@@ -59,6 +59,11 @@ $username = $isLoggedIn ? $_SESSION['username'] : '';
                             <h3>Your Dashboard</h3>
                             <p>Access your personalized features and settings.</p>
                         </div>
+                        <div class="feature-card">
+                            <h3>Chat Platform</h3>
+                            <p>Connect with other users in real-time.</p>
+                            <a href="chat/" class="btn primary">Open Chat</a>
+                        </div>
                     </div>
                 </div>
             </section>

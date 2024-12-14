@@ -17,6 +17,24 @@ A modern web application with user authentication and interactive features.
   - Profile Picture Removal/Reset
 - User Dashboard
 
+### Chat Platform (In Progress) 🚧
+- Real-time Chat Interface
+- Message History
+- User Online Status
+- Direct Messaging
+- Channel-based Communication
+
+Current Implementation:
+- [x] Chat UI Design
+- [x] Basic Message Display
+- [x] Message Input Handling
+- [ ] WebSocket Integration
+- [ ] Real-time Message Updates
+- [ ] User Online Status
+- [ ] Channel Management
+- [ ] Direct Messaging
+- [ ] Message History Storage
+
 ### Interactive UI
 - Responsive Design
 - Dynamic Navigation
@@ -97,19 +115,23 @@ $password = '';
 
 ```
 my_web_page/
+├── chat/
+│   └── index.php                     # Chat interface
 ├── src/
 │   ├── assets/
-│   │   ├── img/         # Folder for images
+│   │   ├── img/                      # Folder for images
 │   │   │   ├── default-avatar.png
-│   │   │   ├── picture.png
+│   │   │   └── picture.png
 │   │   └── styles/
 │   │       ├── components.css        # Component-specific styles
 │   │       ├── main.css              # Main styling
+│   │       └── chat.css             # Chat styling
 │   ├── components/
 │   │   └── navbar.php                # Navigation bar component
 │   ├── js/
 │   │   ├── main.js                   # Main JavaScript functionality
-│   │   └── profile-settings.js       # Profile settings specific JS
+│   │   ├── profile-settings.js       # Profile settings specific JS
+│   │   └── chat.js                  # Chat functionality
 │   ├── php/
 │   │   ├── auth/                     # Authentication functionalities
 │   │   │   ├── login.php             # Login processing
@@ -122,6 +144,8 @@ my_web_page/
 │   │   │   └── update_profile.php    # Handles profile picture updates
 │   │   ├── utils/                    # Utility functions
 │   │   │   └── profile_utils.php     # Profile picture utility functions
+│   │   └── chat/                    # Chat functionalities
+│   │       └── messages.php         # Message handling
 ├── index.php                         # Main entry point
 ├── login.html                        # Login page
 ├── register.html                     # Registration page
