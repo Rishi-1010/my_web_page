@@ -2,7 +2,7 @@
 
 A modern web application with user authentication and interactive features.
 
-![Project Preview](src/assets/img/picture.png)
+![Project Preview](src/assets/img/image.png)
 
 ## Features
 
