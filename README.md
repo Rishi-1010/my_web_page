@@ -12,6 +12,9 @@ A modern web application with user authentication and interactive features.
 - Session Management
 - Secure Password Hashing
 - Profile Settings Management
+  - Custom Profile Picture Upload
+  - Automatic Random Profile Pictures
+  - Profile Picture Removal/Reset
 - User Dashboard
 
 ### Interactive UI
@@ -21,6 +24,17 @@ A modern web application with user authentication and interactive features.
 - Interactive Dashboard
 - Profile Management Interface
 - Modern CSS Animations
+- Dynamic Profile Picture Updates
+
+## Features in Development
+
+- [x] User Profile Management
+- [x] User Dashboard
+- [x] Profile Picture System
+- [ ] Password Reset Functionality
+- [ ] Email Verification
+- [ ] Admin Dashboard
+- [ ] User Activity Logging
 
 ## Tech Stack
 
@@ -68,6 +82,8 @@ my_web_page/
 │   │   │   └── database.php          # Database configuration
 │   │   ├── profile_picture/          # Profile picture functionalities
 │   │   │   └── update_profile.php    # Handles profile picture updates
+│   │   ├── utils/                    # Utility functions
+│   │   │   └── profile_utils.php     # Profile picture utility functions
 ├── index.php                         # Main entry point
 ├── login.html                        # Login page
 ├── register.html                     # Registration page
