@@ -53,37 +53,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add remove profile picture functionality
+    // Update remove profile picture functionality
     const removeProfilePictureBtn = document.getElementById('removeProfilePicture');
     if (removeProfilePictureBtn) {
         removeProfilePictureBtn.addEventListener('click', async function(e) {
             e.preventDefault();
             
-            try {
-                const response = await fetch('src/php/profile_picture/remove_profile_picture.php', {
-                    method: 'POST'
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    // Update profile picture display
-                    const profilePictures = document.querySelectorAll('img[alt="Current Profile Picture"]');
-                    profilePictures.forEach(img => {
-                        img.src = `uploads/profile_pictures/${data.new_picture}`;
+            if (confirm('Are you sure you want to remove your profile picture?')) {
+                try {
+                    const response = await fetch('src/php/profile_picture/remove_profile_picture.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
                     });
                     
-                    // Show success message
-                    const successDiv = document.createElement('div');
-                    successDiv.className = 'alert success';
-                    successDiv.textContent = 'Profile picture removed and replaced with a random one';
-                    document.querySelector('.profile-settings').insertBefore(successDiv, document.querySelector('.profile-form'));
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
                     
-                    // Remove success message after 3 seconds
-                    setTimeout(() => successDiv.remove(), 3000);
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        // Update all profile pictures on the page
+                        const profilePictures = document.querySelectorAll('img[alt="Current Profile Picture"], img[alt="Profile Settings"]');
+                        profilePictures.forEach(img => {
+                            img.src = `uploads/profile_pictures/${data.new_picture}`;
+                        });
+                        
+                        // Show success message
+                        const successDiv = document.createElement('div');
+                        successDiv.className = 'alert success';
+                        successDiv.textContent = 'Profile picture removed and replaced with a random one';
+                        const profileSettings = document.querySelector('.profile-settings');
+                        profileSettings.insertBefore(successDiv, document.querySelector('.profile-form'));
+                        
+                        // Remove success message after 3 seconds
+                        setTimeout(() => successDiv.remove(), 3000);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Failed to remove profile picture. Please try again.');
                 }
-            } catch (error) {
-                console.error('Error:', error);
             }
         });
     }

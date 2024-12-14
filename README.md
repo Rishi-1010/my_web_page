@@ -26,6 +26,44 @@ A modern web application with user authentication and interactive features.
 - Modern CSS Animations
 - Dynamic Profile Picture Updates
 
+## Database Documentation
+
+### Database Name: webapp_db
+
+### Table Structure
+
+#### users
+| Column Name      | Data Type      | Constraints                | Description |
+|-----------------|----------------|---------------------------|-------------|
+| id              | INT(11)        | PRIMARY KEY, AUTO_INCREMENT| Unique identifier for each user |
+| username        | VARCHAR(50)    | NOT NULL                  | User's display name |
+| email           | VARCHAR(100)   | NOT NULL, INDEX           | User's email address |
+| password        | VARCHAR(255)   | NOT NULL                  | Hashed password |
+| created_at      | TIMESTAMP      | DEFAULT CURRENT_TIMESTAMP | Account creation time |
+| profile_picture | VARCHAR(255)   | DEFAULT NULL              | Profile picture filename |
+
+### Database Setup
+1. Create and populate the database using the provided SQL file:
+```bash
+mysql -u root -p < database.sql
+```
+
+### Database Connection
+The database connection is configured in `src/php/config/database.php`:
+```php
+$host = 'localhost';
+$dbname = 'webapp_db';
+$username = 'root';
+$password = '';
+```
+
+### Features
+- Single users table with essential user information
+- Indexed email field for optimized queries
+- Automatic timestamp for user creation tracking
+- Support for profile picture storage
+- Secure password storage with hashing
+
 ## Features in Development
 
 - [x] User Profile Management
