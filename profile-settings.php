@@ -69,6 +69,9 @@ $username = $_SESSION['username'];
                     <div class="form-group">
                         <label for="profile_picture">Update Profile Picture</label>
                         <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+                        <?php if (isset($_SESSION['profile_picture']) && !empty($_SESSION['profile_picture'])): ?>
+                            <button type="button" class="btn secondary" id="removeProfilePicture">Remove Profile Picture</button>
+                        <?php endif; ?>
                     </div>
 
                     <div class="form-group">

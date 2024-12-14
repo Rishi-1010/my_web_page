@@ -7,6 +7,7 @@ session_start();
 
 // Update the path to match your project structure
 require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../utils/profile_utils.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Debug: Print received data
@@ -35,6 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Database connection successful!<br><br>";
         }
 
+        // Get random profile picture
+        $profile_picture = getRandomProfilePicture();
+
         // Check if email exists
         $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->execute([$email]);
@@ -45,9 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Hash password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Insert user
-        $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-        $result = $stmt->execute([$username, $email, $hashed_password]);
+        // Insert user with profile picture
+        $stmt = $pdo->prepare("INSERT INTO users (username, email, password, profile_picture) VALUES (?, ?, ?, ?)");
+        $result = $stmt->execute([$username, $email, $hashed_password, $profile_picture]);
 
         if ($result) {
             echo "Registration successful! User added to database.<br>";
