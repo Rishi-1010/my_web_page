@@ -15,6 +15,10 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="../src/assets/styles/components.css">
     <link rel="stylesheet" href="../src/assets/styles/chat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script>
+        const currentUsername = <?php echo json_encode($_SESSION['username']); ?>;
+    </script>
 </head>
 <body>
     <!-- Back to main app button -->
@@ -47,7 +51,7 @@ if (!isset($_SESSION['user_id'])) {
         <!-- Main Chat Area -->
         <div class="chat-main">
             <div class="chat-header">
-                <h2 id="currentChat"></h2>
+                <h2 id="currentChat"># general</h2>
                 <div class="chat-actions">
                     <button class="btn-icon" id="videoCall">
                         <i class="fas fa-video"></i>
@@ -58,7 +62,9 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             </div>
 
-            <div class="messages-container" id="messages"></div>
+            <div id="messages" class="messages-container">
+                <!-- Messages will be displayed here -->
+            </div>
 
             <div class="chat-input-area">
                 <input type="text" 
