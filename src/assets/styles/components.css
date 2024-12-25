@@ -124,14 +124,14 @@
 } 
 
 /* Auth Forms */
-.auth-container {
+/* .auth-container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     padding: 20px;
-}
+} */
 
 .auth-form {
     background: white;

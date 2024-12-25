@@ -118,7 +118,11 @@ my_web_page/
 ├── chat/
 │   └── index.php                     # Chat interface
 ├── password_reset/
-│   └── password-reset.html
+│   ├── database.php.php            # Database Connection
+│   ├── passwordreset.html          # Enter Email for reset otp
+│   ├── Updatepassword.html         # Form of Updating Password page
+│   └── verifyotp.html              # Form of verifying otp
+
 ├── server/
 │   └──config.php
 │       └── database.php
@@ -141,9 +145,11 @@ my_web_page/
 │   │   ├── auth/                     # Authentication functionalities
 │   │   │   ├── login.php             # Login processing
 │   │   │   ├── logout.php            # Logout handling
-│   │   │   ├── password_reset.php    # Password_reset Functionality
 │   │   │   ├── register.php          # Registration processing
-│   │   │   └── update-profile.php    # Profile updates
+│   │   │   ├── send_otp.php          # Sends OTP to your Mail
+│   │   │   ├── update_password.php   # Updates the password to database
+│   │   │   ├── update-profile.php    # Profile updates
+│   │   │   └── verify_otp.php        # Verifies the OTP if it is correct
 │   │   ├── profile_picture/          # Profile picture functionalities
 │   │   │   ├── remove-profile_picture.php            # Profile picture upload
 │   │   │   └── update_profile.php    # Handles profile picture updates
