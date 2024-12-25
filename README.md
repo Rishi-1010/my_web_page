@@ -117,6 +117,11 @@ $password = '';
 my_web_page/
 ├── chat/
 │   └── index.php                     # Chat interface
+├── password_reset/
+│   └── password-reset.html
+├── server/
+│   └──config.php
+│       └── database.php
 ├── src/
 │   ├── assets/
 │   │   ├── img/                      # Folder for images
@@ -136,6 +141,7 @@ my_web_page/
 │   │   ├── auth/                     # Authentication functionalities
 │   │   │   ├── login.php             # Login processing
 │   │   │   ├── logout.php            # Logout handling
+│   │   │   ├── password_reset.php    # Password_reset Functionality
 │   │   │   ├── register.php          # Registration processing
 │   │   │   └── update-profile.php    # Profile updates
 │   │   ├── config/                   # Configuration files
