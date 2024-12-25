@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 session_start();
 
 // Update the path to match your project structure
-require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../../../server/config/database.php';
 require_once __DIR__ . '/../utils/profile_utils.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

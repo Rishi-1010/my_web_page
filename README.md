@@ -144,20 +144,21 @@ my_web_page/
 │   │   │   ├── password_reset.php    # Password_reset Functionality
 │   │   │   ├── register.php          # Registration processing
 │   │   │   └── update-profile.php    # Profile updates
-│   │   ├── config/                   # Configuration files
-│   │   │   └── database.php          # Database configuration
 │   │   ├── profile_picture/          # Profile picture functionalities
+│   │   │   ├── remove-profile_picture.php            # Profile picture upload
 │   │   │   └── update_profile.php    # Handles profile picture updates
 │   │   ├── utils/                    # Utility functions
 │   │   │   └── profile_utils.php     # Profile picture utility functions
-│   │   └── chat/                    # Chat functionalities
-│   │       └── messages.php         # Message handling
+├── uploads/
+│   └── profile_pictures/             # Profile Photos stored for users
+├── dashboard.php                     # User dashboard
+├── dashboard.sql                     
 ├── index.php                         # Main entry point
 ├── login.html                        # Login page
-├── register.html                     # Registration page
-├── dashboard.php                     # User dashboard
+
 ├── profile-settings.php              # Profile management
 ├── README.md                         # Project documentation
+├── register.html                     # Registration page
 └── LICENSE                          # License file
 ```
 
