@@ -87,7 +87,7 @@ $password = '';
 - [x] User Profile Management
 - [x] User Dashboard
 - [x] Profile Picture System
-- [ ] Password Reset Functionality
+- [x] Password Reset Functionality
 - [ ] Email Verification
 - [ ] Admin Dashboard
 - [ ] User Activity Logging
